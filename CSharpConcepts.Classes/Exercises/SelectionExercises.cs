@@ -16,7 +16,7 @@ namespace CSharpConcepts.Classes.Exercises
             //throw new NotImplementedException();
 
             if (num % 15 == 0)
-            {
+            {   
                 Console.WriteLine("FizzBuzz");
             }
             else if (num % 3 == 0) {

@@ -12,8 +12,9 @@ namespace CSharpConcepts
     {
         internal static void Run()
         {
-            CallTypeExercises();
-            CallSelectionExercises();
+            //CallTypeExercises();
+            //CallSelectionExercises();
+            CallIterationExercises();
         }
 
         private static void CallTypeExercises()
@@ -72,6 +73,48 @@ namespace CSharpConcepts
             Console.WriteLine("triangle type");
             SelectionExercises.triangle(1,4,7);
             Console.WriteLine();
+        }
+
+        private static void CallIterationExercises()
+        {
+            Console.WriteLine("centuries");
+            List<int> runs = new() { 224, 54, -3, 100 };
+            Console.WriteLine(IterationExercises.NumberOfCenturiesScored(runs));
+            Console.WriteLine();
+
+            Console.WriteLine("battingavg");
+            Console.WriteLine(IterationExercises.BattingAverage(runs));
+            Console.WriteLine();
+
+            Console.WriteLine("usernames");
+            List<string> names = new() { "Bob", "Jane", "Kevin", "Fred" };
+            IterationExercises.UserNames(names).ForEach(Console.WriteLine);
+            Console.WriteLine();
+
+            Console.WriteLine("multiples");
+            IterationExercises.CalculateMultiples(10, 100).ForEach(Console.WriteLine);
+            Console.WriteLine();
+
+            Console.WriteLine("is prime?");
+            Console.WriteLine(IterationExercises.isPrime(10));
+            Console.WriteLine();
+
+            Console.WriteLine("star");
+            IterationExercises.starPattern(5);
+            Console.WriteLine();
+            IterationExercises.isPrime(1);
+
+
+            List<List<char>> board = new()
+        {
+            new() { 'X', '0', 'X' },
+            new() { ' ', '0', ' ' },
+            new() { 'X', '0', ' ' }
+        };
+            Console.WriteLine("thing");
+            Console.WriteLine(IterationExercises.noughtsandcrosses(board));
+            Console.WriteLine();
+
         }
     }
 }
